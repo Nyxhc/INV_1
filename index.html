@@ -12,7 +12,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: #87c58d;
         }
         #game-container {
             text-align: center;
@@ -41,7 +41,7 @@
             position: relative;
             width: 100%;
             height: 50vh;
-            border: 1px solid #ccc;
+            border: 1px solid #afb3ad;
             overflow: hidden;
             touch-action: none;
         }
@@ -64,8 +64,8 @@
     <div id="game-container">
         <h1>Cladograma de Zoologia</h1>
         <div id="word-display"></div>
-        <input type="text" id="input" placeholder="Type the full word">
-        <button id="submit">Submit</button>
+        <input type="text" id="input" placeholder="Complete a palavra">
+        <button id="submit">Enviar</button>
         <div id="image-container"></div>
     </div>
 
@@ -74,7 +74,12 @@
             "EUCARIOTOS", "PROTOZOÁRIOS", "METAZOA", "PORIFERA", "RADIATA", "CTENOPHORA",
             "CNIDARIA", "PLACOZOA", "MESOZOA", "BILATERAL", "PROTOSTOMIA", "LOPHOTROCHOZOA",
             "SIPUNCULIDA", "ECTOPROCTA", "MOLLUSCA", "PLATYHELMINTHES", "ROTIFERA", "ENTOPROCTA",
-
+            "POGONOPHORA", "PHORONIDA", "ANNELIDA", "GASTROTRICHA", "GNATHOSTOMULIDA",
+            "ACANTHOCEPHALA", "BRACHIOPODA", "ECHIURIDA", "NERMETEA", "ECDYSOZOA", "CHAETOGNATA",
+            "NEMATODA", "NEMATOMORPHA", "LORICIFERA", "ONYCHOPHORA", "KINORHYNCHA", "ARTHROPODA",
+            "PRIAPULIDA", "PENTASTOMIDA", "TARDIGRADA", "DEUTEROSTOMIA", "ECHINODERMATA", "HEMICHORDATA",
+            "CHORDATA", "TUNICATA", "CEPHALOCHORDATA", "VERTEBRATA", "MAMÍFEROS", "ANFÍBIOS",
+            "RÉPTEIS", "AVES", "PEIXES",
         ];
 
         const imageUrls = {
@@ -96,6 +101,38 @@
             "PLATYHELMINTHES": "platyhelminthes.png",
             "ROTIFERA": "rotifera.png",
             "ENTOPROCTA": "entoprocta.png",
+            "POGONOPHORA": "pogonophora.png",
+            "PHORONIDA": "phoronida.png",
+            "ANNELIDA": "annelida.png",
+            "GASTROTRICHA": "gastrotricha.png",
+            "GNATHOSTOMULIDA": "gnathostomulida.png",
+            "ACANTHOCEPHALA": "acanthocephala.png",
+            "BRACHIOPODA": "brachiopoda.png",
+            "ECHIURIDA": "echiurida.png",
+            "NERMETEA": "nemertea.png",
+            "ECDYSOZOA": "nemertea.png",
+            "CHAETOGNATA": "chaetognata.png",
+            "NEMATODA": "nematoda.png",
+            "NEMATOMORPHA": "nematomorpha.png",
+            "LORICIFERA": "loricifera.png",
+            "ONYCHOPHORA": "onychophora.png",
+            "KINORHYNCHA": "kinorhyncha.png",
+            "ARTHROPODA": "arthropoda.png",
+            "PRIAPULIDA": "priapulida.png",
+            "PENTASTOMIDA": "pentastomida.png",
+            "TARDIGRADA": "tardigrada.png",
+            "DEUTEROSTOMIA": "deuterostomia.png",
+            "ECHINODERMATA": "echinodermata.png",
+            "HEMICHORDATA": "hemichordata.png",
+            "CHORDATA": "chordata.png",
+            "TUNICATA": "tunicata.png",
+            "CEPHALOCHORDATA": "cephalochordata.png",
+            "VERTEBRATA": "vertebrata.png",
+            "MAMÍFEROS": "mamíferos.png",
+            "ANFÍBIOS": "anfíbios.png",
+            "RÉPTEIS": "répteis.png",
+            "AVES": "aves.png",
+            "PEIXES": "peixes.png",
 
             // ... adicione mapeamentos para todas as outras palavras ...
         };
@@ -128,7 +165,7 @@
                     currentWord = words[currentWordIndex];
                     revealedLetters = currentWord[0] + "_".repeat(currentWord.length - 1);
                 } else {
-                    wordDisplay.textContent = "Congratulations! You've completed the game!";
+                    wordDisplay.textContent = "Parabéns! Você completou o cladograma";
                     input.style.display = "none";
                     submit.style.display = "none";
                     return;
